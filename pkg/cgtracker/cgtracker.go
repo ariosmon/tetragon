@@ -155,7 +155,7 @@ func RegisterCgroupTracker(sensor *sensors.Sensor) (*sensors.Sensor, error) {
 	}
 
 	cgTrackerMap := program.MapBuilder(MapName, trackerProgs...)
-	cgTrackerMap.SetMaxEntries(MapEntries)
+	// cgTrackerMap.SetMaxEntries(MapEntries)
 
 	sensor.Progs = append(sensor.Progs, mkdirProg, releaseProg)
 	sensor.Maps = append(sensor.Maps, cgTrackerMap)
